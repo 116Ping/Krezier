@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You!</title>
+    <link rel="stylesheet" href="../pages/reviewTRIAL.css">
+    <link rel="icon" href="../images/logo.png">
+    <style>
+        @import url("../style.css");
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="home1.html"><img src="../images/logo.png" alt="logo" style="width: 50px;"></a>
+        <button class="hamburger" aria-label="Toggle navigation">
+            &#9776;
+        </button>
+        <nav class="navigation">
+            <a href="#">Home</a>
+            <a href="/pages/aboutus.html">About</a>
+            <div class="dropdown">
+                <a href="#">Shop</a>
+                <div class="dropdown-content">
+                    <a href="consoles.html">Console</a>
+                    <a href="headphones.html">Headphones</a>
+                    <a href="keyboards.html">Keyboard</a>
+                    <a href="laptops.html">Laptop</a>
+                    <a href="mouse.html">Mouse</a>
+                </div>
+            </div>
+            <button class="btnLogin-popup" onclick="alert('Logged out successfully'); window.location.href='../home.html';">Logout</button>
+        </nav>
+    </header>
+
+    
+
+    <main style="margin: 110px; border-radius: 10px;">
+        <section class="review-section">
+            <div class="container">
+                <h1>We Value Your Feedback!</h1>
+                <p>Please take a moment to rate your experience and leave a comment below.</p>
+                <form action="submit_review.php" method="POST" class="review-form">
+                    <label for="rating">Rating:</label>
+                    <select name="rating" id="rating" required>
+                        <option value="">--Select--</option>
+                        <option value="5">★★★★★ - Excellent</option>
+                        <option value="4">★★★★☆ - Very Good</option>
+                        <option value="3">★★★☆☆ - Good</option>
+                        <option value="2">★★☆☆☆ - Fair</option>
+                        <option value="1">★☆☆☆☆ - Poor</option>
+                    </select>
+
+                    <label for="comments">Your Comments:</label>
+                    <textarea name="comments" id="comments" rows="5" placeholder="Share your thoughts here..." required></textarea>
+
+                    <button type="submit" class="btn-submit" onclick="window.location.href='reviewThankyou.html'; return false;">Submit Review</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" style="margin-top: 20px;">
+        <div class="container">
+            <h4>&copy; 2024 KREZIER Online Shop. All rights reserved.</h4>
+            <p>Contact us: Krezier@gmail.com | +63 8149-742-8344</p>
+            <ul class="footer-links" >
+                <li style="margin-top: 10px;" ><a href="aboutus.html" style="color: #2a506d;">About Us</a></li>
+                <li style="margin-top: 10px;"><a href="review.html" style="color: #2a506d;">Rate Us</a></li>
+                <li ><a href="../home1.html"><img src="../images/logo.png" alt="logo" style="width: 50px;"></a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.hamburger').addEventListener('click', function () {
+            const nav = document.querySelector('.navigation');
+            nav.classList.toggle('active');
+        });
+    </script>
+
+</body>
+</html>

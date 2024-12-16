@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krazier - Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/logo.png">
+</head>
+
+<body>
+    
+    <header>
+        <a href="home1.html"><img src="images/logo.png" alt="logo" style="width: 50px;"></a>
+        <button class="hamburger" aria-label="Toggle navigation">
+            &#9776;
+        </button>
+        <nav class="navigation">
+            <a href="#">Home</a>
+            <a href="pages/aboutus.html">About</a>
+            <div class="dropdown">
+                <a href="#">Shop</a>
+                <div class="dropdown-content">
+                    <a href="pages/consoles.html">Console</a>
+                    <a href="pages/headphones.html">Headphones</a>
+                    <a href="pages/keyboards.html">Keyboard</a>
+                    <a href="pages/laptops.html">Laptop</a>
+                    <a href="pages/mouse.html">Mouse</a>
+                </div>
+            </div>
+            <button class="btnLogin-popup">Login</button>
+        </nav>
+    </header>
+
+    <div class="wrapper">
+        
+        <div class="form-box login">
+            <h2>Login</h2>
+            <form onsubmit="verifyLogin();; return false;">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input type="text" id="loginEmail" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" id="loginPassword" required>
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox"> Remember me</label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <p id="loginMessage" class="feedback"></p>
+                <div class="login-register">
+                    <p>Don't have an account? <a href="#" class="register-link" style="color: #2a506d;">Register</a></p>
+                </div>
+            </form>
+        </div>
+    
+        
+        <div class="form-box register">
+            <h2>Registration</h2>
+            <form onsubmit="registerUser(); return false;">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="person"></ion-icon></span>
+                    <input type="text" id="regUserName" required>
+                    <label>Username</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input type="email" id="regEmail" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" id="regPassword" required>
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox" required> I Agree to the Terms & Conditions</label>
+                </div>
+                <button type="submit" class="btn">Register</button>
+                <p id="registerMessage" class="feedback" style="color: white;"></p>
+                <div class="login-register">
+                    <p>Already have an account? <a href="#" class="login-link" style="color: #2a506d;">Login</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <footer class="footer" style="margin-top: 20px;">
+        <div class="container">
+            <h4>&copy; 2024 KREZIER Online Shop. All rights reserved.</h4>
+            <p>Contact us: Krezier@gmail.com | +63 8149-742-8344</p>
+            <ul class="footer-links" >
+                <li style="margin-top: 10px;" ><a href="pages/aboutus.html" style="color: #2a506d;">About Us</a></li>
+                <li style="margin-top: 10px;"><a href="pages/review.html" style="color: #2a506d;">Rate Us</a></li>
+                <li ><a href="home1.html"><img src="images/logo.png" alt="logo" style="width: 50px;"></a></li>
+            </ul>
+        </div>
+    </footer>
+    
+
+    <script src="main.js"></script>
+    <script>
+        document.querySelector('.hamburger').addEventListener('click', function () {
+            const nav = document.querySelector('.navigation');
+            nav.classList.toggle('active');
+        });
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
